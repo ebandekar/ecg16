@@ -1,0 +1,74 @@
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none; /* Completely hides the scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Internet Explorer and Edge */
+body {
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+}
+
+/* Ensure background is properly set */
+body {
+  background-image: url("./assets/back.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin: 0;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+/* If you want scrolling but no scrollbar, use this instead of overflow: hidden; */
+html, body {
+  overflow-y: scroll; /* Allows scrolling */
+  height: 100%;
+}
+
+/* Container adjustments */
+.container {
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Back to top button */
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  font-size: 1.7em;
+  cursor: pointer;
+  padding: 0.8% 1.2%;
+  border-radius: 60%;
+  background-color: #ff5722; /* Example color */
+  color: white;
+}
+
+/* Heart image styling */
+.heart-image {
+  position: fixed; /* Keeps it in place when scrolling */
+  left: 20px; /* Adjust for positioning */
+  top: 50%;
+  transform: translateY(-50%); /* Centers it vertically */
+  width: 150px; /* Adjust size */
+  height: auto;
+  background-image: url("./assets/back.jpeg");
+  opacity: 0.8; /* Slight transparency for smooth look */
+}
+
+/* Optional hover effect */
+.heart-image:hover {
+  opacity: 1; /* Becomes fully visible */
+  transform: translateY(-50%) scale(1.1); /* Slight zoom effect */
+}

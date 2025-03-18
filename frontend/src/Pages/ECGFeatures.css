@@ -1,0 +1,108 @@
+/* Main container styling */
+.ecg-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Prevents content from overflowing */
+  }
+  
+  /* Ensure it stays within the viewport */
+  @media (max-width: 1024px) {
+    .ecg-container {
+      margin: 20px; /* Adds margin to prevent it from touching screen edges */
+      padding: 30px;
+      overflow: hidden;
+
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .ecg-container {
+      margin: 15px;
+      padding: 20px;
+      overflow: hidden;
+    }
+  }
+  
+  /* Title & subtitle */
+  .ecg-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+  }
+  
+  .ecg-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Features grid layout */
+  .ecg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 30px; /* Prevents content from touching the bottom edge */
+    
+  }
+  
+  /* Individual feature card */
+  .ecg-feature {
+    background: linear-gradient(135deg, #eef2ff, #e0f7fa);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .ecg-feature:hover {
+    transform: scale(1.05);
+  }
+  
+  .ecg-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .ecg-feature-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .ecg-feature-desc {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Future Scope section */
+  .ecg-future {
+    margin-top: 40px;
+    padding: 20px;
+    background: linear-gradient(to right, #4a90e2, #50b7f5);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensures the box stays contained */
+  }
+  
+  /* Prevents bottom overflow issue */
+  .ecg-future h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .ecg-future p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding-bottom: 15px; /* Adds space at the bottom to prevent cut-off */
+  }
+  
