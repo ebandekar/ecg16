@@ -22,14 +22,17 @@ export default Box;
 
 // Styled Components
 const BoxContainer = styled.div`
-  width: 500px;
-  padding: 90px;
   
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin: 20px auto;
+  width: 500px;  /* Adjust width */
+  padding: 50px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 `;
 
 const Button = styled.button`

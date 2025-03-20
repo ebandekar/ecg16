@@ -151,17 +151,31 @@ const Navigation = () => {
 //   top: 0;
 //   z-index: 100;
 // `;
+  // const NavBar = styled.nav`
+   // background-color: rgba(206, 11, 11, 0.7); /* Semi-transparent red */
+    //backdrop-filter: blur(5px); /* Adds a slight blur effect */
+    //box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    //border: none;
+    //padding: 10px 0;
+    //position: sticky;
+    //top: 0;
+    //z-index: 100;
+  //`;
+
+
+
 const NavBar = styled.nav`
-  background-color: rgba(206, 11, 11, 0.7); /* Semi-transparent red */
-  backdrop-filter: blur(5px); /* Adds a slight blur effect */
+  background-color: rgba(190, 22, 22, 0.7); /* Semi-transparent red */
+  backdrop-filter: blur(5px);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border: none;
-  padding: 10px 0;
-  position: sticky;
+  padding: 20px 0;
+  position: fixed;  /* Fixed navbar on top */
+  width: 100%;
   top: 0;
-  z-index: 100;
+  left: 0;
+  z-index: 1000; /* Ensures navbar stays on top */
 `;
-
 
 const NavList = styled.ul`
   display: flex;
@@ -170,6 +184,7 @@ const NavList = styled.ul`
   margin: 0;
   padding: 0;
   gap: 40px; /* Added spacing between NavItems */
+  gap: 40px;
 `;
 
 const NavItem = styled.li`
@@ -180,6 +195,7 @@ const NavLinkStyled = styled(NavLink)`
   text-decoration: none;
   color: white;
   font-size: 18px;
+  font-size: 25px;
   transition: color 0.3s ease-in-out;
 
   &:hover {
@@ -188,6 +204,7 @@ const NavLinkStyled = styled(NavLink)`
 
   &.active {
     color:rgb(34, 16, 14);
+    color: rgb(34, 16, 14);
     font-weight: bold;
   }
 `;
