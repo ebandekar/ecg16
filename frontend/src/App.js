@@ -129,8 +129,15 @@ import Navigation from "./Components/Navigation";
 import Home from "./Pages/Home";
 import Features from "./Pages/Features";
 import Predict from "./Pages/Predict";
+import Analysis from "./Pages/Analysis";
+import Normal from "./Pages/Normal";
+import Supraventricular from "./Pages/Supraventricular";
+import Ventricular from "./Pages/Ventricular";
+import MyocardialInfarction from "./Pages/MyocardialInfarction";
+import Hypertrophy from "./Pages/Hypertrophy";
+import Uncertain from "./Pages/Uncertain";
 import "./App.css"; // Ensure correct path
-import Analysis from "./Pages/Analysis"
+
 function App() {
   const [showButton, setShowButton] = useState(false);
 
@@ -156,6 +163,14 @@ function App() {
         <Route path="/features" element={<Features />} />
         <Route path="/analysis" element={<Analysis />} />
         <Route path="/predict" element={<Predict />} />
+
+        {/* Class-Based Analysis Pages */}
+        <Route path="/analysis/N" element={<Normal />} />
+        <Route path="/analysis/S" element={<Supraventricular />} />
+        <Route path="/analysis/V" element={<Ventricular />} />
+        <Route path="/analysis/Q" element={<MyocardialInfarction />} />
+        <Route path="/analysis/F" element={<Hypertrophy />} />
+        <Route path="/analysis/Uncertain" element={<Uncertain />} />
       </Routes>
 
       {showButton && <BackToTopButton onClick={scrollToTop}>⬆</BackToTopButton>}
@@ -186,3 +201,4 @@ const BackToTopButton = styled.button`
     background-color: #0056b3;
   }
 `;
+
