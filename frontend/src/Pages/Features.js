@@ -34,7 +34,7 @@ const ECGFeatures = () => {
 const BackgroundWrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
-  background-image: url(${bggimage});
+   background-image: url("./assets/back.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

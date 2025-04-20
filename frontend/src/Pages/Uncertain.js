@@ -23,8 +23,9 @@ const AnalysisContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, rgb(212, 181, 186), rgb(236, 15, 11));
+  background-image: url("./assets/back.jpeg");
   padding: 20px;
+    overflow: hidden;
 `;
 
 const Card = styled.div`
@@ -52,7 +53,7 @@ const StyledLink = styled(Link)`
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: #007bff;
+  background:135deg,rgb(36, 12, 7),rgb(224, 53, 53);
   color: white;
   text-decoration: none;
   border-radius: 5px;
