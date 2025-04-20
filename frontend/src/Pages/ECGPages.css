@@ -1,0 +1,56 @@
+/* ECG Page Styles */
+.ecg-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Header */
+  .ecg-page h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d90429; /* Red shade for medical emphasis */
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Description */
+  .ecg-page p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Remedies Section */
+  .ecg-page h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0056b3; /* Deep blue for contrast */
+    margin-top: 20px;
+  }
+  
+  /* List Styles */
+  .ecg-page ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .ecg-page li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Hover Effect */
+  .ecg-page:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  

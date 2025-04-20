@@ -1,127 +1,4 @@
-// // import React from "react";
-// // // import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-// // import Navigation from "./Components/Navigation";
-// // import { Router } from "react-router-dom";
 
-
-
-// // function App() {
-// //   return(
-// //   <h1>ECG Classification using ensemble classifier</h1>
-  
-
- 
-// //   )
-// // }
-
-// // export default App;
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Navigation from "./Components/Navigation";
-// import "./App.css"; // Ensure the path is correct
-
-
-// function App() {
-//   return (
-//     <Router>
-//       <Navigation />
-//       <h1>ECG Classification using ensemble classifier</h1>
-
-//       {/* Define Routes */}
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/features" element={<Features />} />
-//         <Route path="/predict" element={<Predict />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// // Dummy components for routes (Replace with actual components)
-// const Home = () => <h2>Home Page</h2>;
-// const Features = () => <h2>Features Page</h2>;
-// const Predict = () => <h2>Predict Page</h2>;
-
-// export default App;
-
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Navigation from "./Components/Navigation";
-// import "./App.css"; // Ensure the path is correct
-
-// function App() {
-//   return (
-//     <Router>
-//       <Navigation />
-//       <div className="container">
-//         <h1>ECG Classification using Ensemble Classifier</h1>
-
-//         {/* Define Routes */}
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/features" element={<Features />} />
-//           <Route path="/predict" element={<Predict />} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   );
-// }
-
-// // Dummy components for routes (Replace with actual components)
-// const Home = () => <h2>Home Page</h2>;
-// const Features = () => <h2>Features Page</h2>;
-// const Predict = () => <h2>Predict Page</h2>;
-
-// export default App;
-// import React, { useState, useEffect } from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Navigation from "./Components/Navigation";
-// import "./App.css"; // Ensure correct path
-
-// function App() {
-//   const [showButton, setShowButton] = useState(false);
-
-//   useEffect(() => {
-//     window.addEventListener("scroll", () => {
-//       if (window.scrollY > 300) {
-//         setShowButton(true);
-//       } else {
-//         setShowButton(false);
-//       }
-//     });
-//   }, []);
-
-//   const scrollToTop = () => {
-//     window.scrollTo({ top: 0, behavior: "smooth" });
-//   };
-
-//   return (
-//     <Router>
-//       <Navigation />
-//       <h1>ECG Classification using ensemble classifier</h1>
-
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/features" element={<Features />} />
-//         <Route path="/predict" element={<Predict />} />
-//       </Routes>
-
-//       {/* Back to Top Button */}
-//       {showButton && (
-//         <button id="backToTopBtn" onClick={scrollToTop}>
-//           ⬆
-//         </button>
-//       )}
-//     </Router>
-//   );
-// }
-
-// // Dummy components
-// const Home = () => <h2>Home Page</h2>;
-// const Features = () => <h2>Features Page</h2>;
-// const Predict = () => <h2>Predict Page</h2>;
-
-// export default App;
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
@@ -137,6 +14,10 @@ import MyocardialInfarction from "./Pages/MyocardialInfarction";
 import Hypertrophy from "./Pages/Hypertrophy";
 import Uncertain from "./Pages/Uncertain";
 import "./App.css"; // Ensure correct path
+import Contact from "./Pages/Contact"; // Import the Contact Page
+import ConductionDisturbance from "./Pages/ConductionDisturbance";
+import Login from './Pages/Login'; 
+import Register from './Pages/Register';
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -159,18 +40,28 @@ function App() {
       <Navigation />
       
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/features" element={<Features />} />
         <Route path="/analysis" element={<Analysis />} />
         <Route path="/predict" element={<Predict />} />
-
+        <Route path="/contact" element={<Contact />} />
         {/* Class-Based Analysis Pages */}
-        <Route path="/analysis/N" element={<Normal />} />
+        {/* <Route path="/analysis/N" element={<Normal />} />
         <Route path="/analysis/S" element={<Supraventricular />} />
         <Route path="/analysis/V" element={<Ventricular />} />
         <Route path="/analysis/Q" element={<MyocardialInfarction />} />
         <Route path="/analysis/F" element={<Hypertrophy />} />
         <Route path="/analysis/Uncertain" element={<Uncertain />} />
+        <Route path="/contact" element={<Contact />} /> */}
+           <Route path="/normal" element={<Normal />} />
+        <Route path="/hypertrophy" element={<Hypertrophy />} />
+        <Route path="/infarction" element={<MyocardialInfarction />} />
+        <Route path="/supraventricular" element={<Supraventricular />} />
+        <Route path="/uncertain" element={<Uncertain />} />
+        <Route path="/ventricular" element={<Ventricular />} />
+        <Route path="/conduction" element={<ConductionDisturbance />} /> 
       </Routes>
 
       {showButton && <BackToTopButton onClick={scrollToTop}>⬆</BackToTopButton>}

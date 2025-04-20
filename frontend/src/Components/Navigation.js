@@ -1,212 +1,257 @@
 
-  
-// import React from "react";
-// import { NavLink } from "react-router-dom";
-// import styled from "styled-components";
-
-// const Navigation = () => {
-//   return (
-//     <NavBar>
-//       <NavList>
-//         <NavItem>
-//           <NavLinkStyled to="/" activeClassName="active">Home</NavLinkStyled>
-//         </NavItem>
-//         <NavItem>
-//           <NavLinkStyled to="/features" activeClassName="active">Features</NavLinkStyled>
-//         </NavItem>
-//         <NavItem>
-//           <NavLinkStyled to="/predict" activeClassName="active">Predict</NavLinkStyled>
-//         </NavItem>
-//       </NavList>
-//     </NavBar>
-//   );
-// };
-
-// // Styled Components
-// const NavBar = styled.nav`
-//   background-color: #2c3e50;
-//   padding: 10px 0;
-//   position: sticky;
-//   top: 0;
-//   z-index: 100;
-// `;
-
-// const NavList = styled.ul`
-//   display: flex;
-//   justify-content: center;
-//   list-style: none;
-//   margin: 0;
-//   padding: 0;
-// `;
-
-// const NavItem = styled.li`
-//   margin: 0 20px;
-// `;
-
-// const NavLinkStyled = styled(NavLink)`
-//   text-decoration: none;
-//   color: white;
-//   font-size: 18px;
-//   transition: color 0.3s ease-in-out;
-
-//   &:hover {
-//     color: #3498db;
-//   }
-
-//   &.active {
-//     color: #e74c3c;
-//     font-weight: bold;
-//   }
-// `;
-
-// export default Navigation;
-// import React from "react";
-// import { NavLink } from "react-router-dom";
-// import styled from "styled-components";
-
-// const Navigation = () => {
-//     return (
-//       <NavBar>
-//         <NavList>
-//           <NavItem>
-//             <NavLinkStyled to="/">Home</NavLinkStyled>
-//           </NavItem>
-//           <NavItem>
-//             <NavLinkStyled to="/features">Features</NavLinkStyled>
-//           </NavItem>
-//           <NavItem>
-//             <NavLinkStyled to="/predict">Predict</NavLinkStyled>
-//           </NavItem>
-//         </NavList>
-//       </NavBar>
-//     );
-// };
-
-// const NavBar = styled.nav`
-//   background-color:rgb(1, 2, 2);
-//   padding: 10px 0;
-//   position: sticky;
-//   top: 0;
-//   z-index: 100;
-// `;
-
-// const NavList = styled.ul`
-//   display: flex;
-//   justify-content: center;
-//   list-style: none;
-//   margin: 0;
-//   padding: 0;
-// `;
-
-// const NavItem = styled.li`
-//   margin: 0 20px;
-// `;
-
-// const NavLinkStyled = styled(NavLink)`
-//   text-decoration: none;
-//   color: white;
-//   font-size: 18px;
-//   transition: color 0.3s ease-in-out;
-
-//   &:hover {
-//     color:rgb(192, 208, 219);
-//   }
-
-//   &.active {
-//     color: #e74c3c;
-//     font-weight: bold;
-//   }
-// `;
-
-// export default Navigation;
-
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Navigation = () => {
-    return (
-      <NavBar>
-        <NavList>
-          <NavItem>
-            <NavLinkStyled to="/">Home</NavLinkStyled>
-          </NavItem>
-          <NavItem>
-            <NavLinkStyled to="/features">Features</NavLinkStyled>
-          </NavItem>
-          <NavItem>
-            <NavLinkStyled to="/predict">Predict</NavLinkStyled>
-          </NavItem>
-        </NavList>
-      </NavBar>
-    );
+  return (
+    <NavContainer>
+      <NavList>
+        <NavItem><Link to="/">Home</Link></NavItem>
+        <NavItem><Link to="/features">Features</Link></NavItem>
+        <NavItem><Link to="/predict">Predict</Link></NavItem>
+        {/* <NavItem><Link to="/analysis">Analysis</Link></NavItem> */}
+        <NavItem><Link to="/contact">Contact Us</Link></NavItem>
+
+        <Dropdown>
+  <NavItemMain>ECG Categories ▼</NavItemMain>
+  <DropdownContent>
+    <DropdownItem><Link to="/normal">Normal ECG</Link></DropdownItem>
+    <DropdownItem><Link to="/conduction">Conduction Disturbance</Link></DropdownItem>
+    <DropdownItem><Link to="/supraventricular">Supraventricular</Link></DropdownItem>
+    <DropdownItem><Link to="/infarction">Myocardial Infarction</Link></DropdownItem>
+    <DropdownItem><Link to="/hypertrophy">Hypertrophy</Link></DropdownItem>
+   
+  </DropdownContent>
+</Dropdown>
+
+      </NavList>
+    </NavContainer>
+  );
 };
 
-// const NavBar = styled.nav`
-//   background-color: rgb(206, 11, 11);
-//   box-shadow:10;
-//   border :none;
-//   padding: 10px 0;
-//   position: sticky;
-//   top: 0;
-//   z-index: 100;
+export default Navigation;
+
+// Styled Components
+// const NavContainer = styled.nav`
+//   background: transparent;
+//   padding: 15px;
 // `;
-  // const NavBar = styled.nav`
-   // background-color: rgba(206, 11, 11, 0.7); /* Semi-transparent red */
-    //backdrop-filter: blur(5px); /* Adds a slight blur effect */
-    //box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    //border: none;
-    //padding: 10px 0;
-    //position: sticky;
-    //top: 0;
-    //z-index: 100;
-  //`;
 
+// const NavList = styled.ul`
+//   list-style: none;
+//   display: flex;
+//   justify-content: center;
+//   gap: 20px;
+// `;
 
+// const NavItem = styled.li`
+//   display: inline;
+//   font-size: 1.2rem;
 
-const NavBar = styled.nav`
-  background-color: rgba(190, 22, 22, 0.7); /* Semi-transparent red */
-  backdrop-filter: blur(5px);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border: none;
-  padding: 20px 0;
-  position: fixed;  /* Fixed navbar on top */
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensures navbar stays on top */
+//   a {
+//     text-decoration: none;
+//     color: white;
+//     padding: 10px;
+//     transition: 0.3s;
+
+//     &:hover {
+//       color: #ffdd57;
+//     }
+//   }
+// `;
+
+// // Dropdown Styles
+// const Dropdown = styled.div`
+//   position: relative;
+//   display: inline-block;
+// `;
+
+// const NavItemMain = styled.div`
+//   font-size: 1.2rem;
+//   color: white;
+//   cursor: pointer;
+//   padding: 10px;
+//   transition: 0.3s;
+
+//   &:hover {
+//     color: #ffdd57;
+//   }
+// `;
+
+// const DropdownContent = styled.div`
+//   display: none;
+//   position: absolute;
+//   background: white;
+//   min-width: 200px;
+//   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+//   border-radius: 5px;
+//   z-index: 1;
+  
+//   ${Dropdown}:hover & {
+//     display: block;
+//   }
+// `;
+
+// const DropdownItem = styled.div`
+//   padding: 10px;
+//   text-align: left;
+
+//   a {
+//     color: black;
+//     text-decoration: none;
+//     display: block;
+    
+//     &:hover {
+//       background: #f0f0f0;
+//     }
+//   }
+// `;
+// const NavContainer = styled.nav`
+//   background: transparent;
+//   padding: 15px;
+// `;
+
+// const NavList = styled.ul`
+//   list-style: none;
+//   display: flex;
+//   justify-content: space-between;  /* Distribute items across the available space */
+//   gap: 10px;  /* Increased gap between items */
+//   width: 100%; /* Ensures the list spans across the full width of the container */
+// `;
+
+// const NavItem = styled.li`
+//   display: inline;
+//   font-size: 1.2rem;
+
+//   a {
+//     text-decoration: none;
+//     color: white;
+//     padding: 10px;
+//     transition: 0.3s;
+
+//     &:hover {
+//       color: #ffdd57;
+//     }
+//   }
+// `;
+
+// // Dropdown Styles
+// const Dropdown = styled.div`
+//   position: relative;
+//   display: inline-block;
+// `;
+
+// const NavItemMain = styled.div`
+//   font-size: 1.2rem;
+//   color: white;
+//   cursor: pointer;
+//   padding: 10px;
+//   transition: 0.3s;
+
+//   &:hover {
+//     color: #ffdd57;
+//   }
+// `;
+
+// const DropdownContent = styled.div`
+//   display: none;
+//   position: absolute;
+//   background: white;
+//   min-width: 200px;
+//   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+//   border-radius: 5px;
+//   z-index: 1;
+  
+//   ${Dropdown}:hover & {
+//     display: block;
+//   }
+// `;
+
+// const DropdownItem = styled.div`
+//   padding: 10px;
+//   text-align: left;
+
+//   a {
+//     color: black;
+//     text-decoration: none;
+//     display: block;
+    
+//     &:hover {
+//       background: #f0f0f0;
+//     }
+//   }
+// `;
+const NavContainer = styled.nav`
+  background: transparent;
+  padding: 15px;
 `;
 
 const NavList = styled.ul`
-  display: flex;
-  justify-content: center;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 40px; /* Added spacing between NavItems */
-  gap: 40px;
+  display: flex;
+  justify-content: space-evenly;  /* Evenly spaced items across the available space */
+  width: 100%; /* Ensures the list spans across the full width of the container */
 `;
 
 const NavItem = styled.li`
-  padding: 0 10px;
+  font-size: 1.2rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #ffdd57;
+    }
+  }
 `;
 
-const NavLinkStyled = styled(NavLink)`
-  text-decoration: none;
+// Dropdown Styles
+const Dropdown = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const NavItemMain = styled.div`
+  font-size: 1.2rem;
   color: white;
-  font-size: 18px;
-  font-size: 25px;
-  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
 
   &:hover {
-    color: rgb(192, 208, 219);
-  }
-
-  &.active {
-    color:rgb(34, 16, 14);
-    color: rgb(34, 16, 14);
-    font-weight: bold;
+    color: #ffdd57;
   }
 `;
 
-export default Navigation;
+const DropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+  
+  ${Dropdown}:hover & {
+    display: block;
+  }
+`;
+
+const DropdownItem = styled.div`
+  padding: 10px;
+  text-align: left;
+
+  a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+`;

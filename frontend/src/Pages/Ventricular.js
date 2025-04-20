@@ -23,8 +23,9 @@ const AnalysisContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, rgb(212, 181, 186), rgb(236, 15, 11));
+   background-image: url("./assets/back.jpeg");
   padding: 20px;
+    overflow: hidden;
 `;
 
 const Card = styled.div`
