@@ -1,9 +1,9 @@
-## HeartSense AI — ECG Classification and Report Delivery System
+# HeartSense AI — ECG Classification and Report Delivery System
 HeartSense AI is an end-to-end ECG image classification and reporting system. It uses advanced deep learning and ensemble models to identify various heart conditions from ECG scans. Users can upload ECG images, receive predictions, and even get a human-friendly report delivered to their email.
 
 This project combines a machine learning pipeline with a robust web backend to offer an accessible solution for early detection and awareness of heart conditions.
 
-What This Project Does
+## What This Project Does
 Accepts ECG images from users
 
 Preprocesses and extracts features using a trained MobileNetV2 model
@@ -14,7 +14,7 @@ Balances dataset classes using controlled undersampling during preprocessing to 
 
 Sends an email report with a short explanation and helpful resources to the user
 
-Types of ECG Conditions Detected
+## Types of ECG Conditions Detected
 The system supports multi-label predictions. It can detect one or more of the following conditions:
 
 Normal ECG
@@ -33,7 +33,7 @@ Uncertain (when prediction confidence is low)
 
 Each classification comes with an explanation and a trusted external link for further reading.
 
-Components and Structure
+## Components and Structure
 1. Model Training and Preprocessing
 Images were resized to 224x224 pixels and converted to grayscale
 
@@ -61,7 +61,7 @@ Stores user data in MongoDB
 
 Offers login, registration, and a /send-report API to email ECG results to users
 
-How to Use
+## How to Use
 For Users
 Upload an ECG image via the front-end or API
 
@@ -78,7 +78,7 @@ Start the Flask server for prediction
 
 Start the Node.js server for user management and emailing reports
 
-Technologies Used
+## Technologies Used
 Python (Flask, TensorFlow, scikit-learn, skmultilearn)
 
 Node.js and Express
@@ -91,7 +91,7 @@ nodemailer for email delivery
 
 HTML and JavaScript (for the frontend, if applicable)
 
-Key Features
+## Key Features
 Ensemble-based ECG classification from images
 
 Intelligent preprocessing and class balancing
@@ -104,10 +104,10 @@ Personalized ECG reports sent by email
 
 Easy to extend and integrate with a frontend or mobile app
 
-Why It Matters
+## Why It Matters
 HeartSense AI makes automated ECG classification more accessible. Rather than relying solely on real-time ECG signals, it works with ECG images—making it compatible with printed scans, digital PDFs, or camera captures. By providing personalized, interpretable results, this project supports patients and healthcare providers in identifying early signs of cardiovascular risk.
 
-Future Improvements
+## Future Improvements
 Add support for PDF uploads and OCR-based ECG extraction
 
 Visualize feature maps or prediction confidence
